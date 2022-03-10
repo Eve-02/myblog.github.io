@@ -1,0 +1,129 @@
+body {
+  // overflow: hidden;
+}
+// 轮播图
+.banner {
+  width: 1280px;
+  height: 648px;
+  background: url(../images/10.jpg);
+  position: relative;
+
+  div {
+    position: absolute;
+    width: 700px;
+    height: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30%;
+
+    p {
+      font-size: 50px;
+      text-align: center;
+      text-shadow: 2px 2px 1px #fff;
+      color: rgb(63, 46, 46);
+    }
+
+    p:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+}
+
+// clock
+.logo {
+  position: relative;
+
+  .clock {
+    position: absolute;
+    top: 37px;
+    left: 50px;
+
+    > span:nth-child(1) {
+      display: block;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #ff8993a4;
+      border-radius: 50%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      transform: rotateY(30deg)
+    }
+    > span:nth-child(2) {
+      display: block;
+      width: 1px;
+      height: 35px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.377);
+    }
+
+    @clock-w: 50px;
+    .circle {
+      width: @clock-w;
+      height: @clock-w;
+      border-radius: 50%;
+      background-color: #bfa;
+      background: url(../images/16.jpg);
+      background-position: center;
+      background-size: @clock-w;
+      position: relative;
+
+      span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform-origin: center bottom;
+      }
+
+      // 时针
+      span.hour {
+        width: 1px;
+        height: 25%;
+        background-color: #000;
+        margin-top: 25%;
+        animation: clock-move 216000s linear infinite;
+      }
+
+      // 分针
+      span.minute {
+        width: 1px;
+        height: 30%;
+        background-color: #e0f51f;
+        margin-top: 20%;
+        animation: clock-move 3600s linear infinite;
+      }
+
+      // 秒针
+      span.second {
+        width: 1px;
+        height: 32%;
+        background-color: #f2f1eb;
+        margin-top: 18%;
+        animation: clock-move 60s linear infinite;
+      }
+
+      // 中心点
+      span.point {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #030202;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+// 动画:时钟
+@keyframes clock-move {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

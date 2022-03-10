@@ -1,0 +1,48 @@
+.main {
+  width: 1280px;
+  height: 648px;
+  background: url(../home/images/7.jpg);
+  overflow: hidden;
+}
+.main .box {
+  margin: 120px 60px 0 60px;
+}
+.main .box .article {
+  width: 542px;
+}
+.main .box .article h2 {
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 20px;
+  text-shadow: 0 0 2px #ccc;
+}
+.main .box .article .wrapper {
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #000;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.main .box .article .wrapper div {
+  width: 500px;
+}
+.main .box .article .wrapper div p {
+  text-indent: 2em;
+  line-height: 24px;
+}
+.main .box .article .wrapper::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
+.main .box .article1 {
+  float: left;
+}
+.main .box .article2 {
+  float: right;
+}
+/*# sourceMappingURL=./article2.css.map */

@@ -1,0 +1,121 @@
+.main {
+  width: 1280px;
+  height: 648px;
+  background: url(../home/images/9.jpg);
+  position: relative;
+  overflow: hidden;
+}
+.main article {
+  width: 300px;
+  height: 180px;
+  background-color: rgba(200, 200, 200, 0.3);
+  position: absolute;
+  left: 260px;
+  animation: infinite 1.5s linear;
+}
+.main article .box1 {
+  width: 260px;
+  margin: 15px auto 0;
+  animation: article-show 1.5s linear;
+}
+.main article .box1 h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+.main article .box1 p {
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.main .enter {
+  width: 0;
+  height: 44px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  left: 310px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  animation: show 1s linear 2s forwards;
+}
+.main .enter::after {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-right: none;
+  border-left-color: rgba(0, 0, 0, 0.8);
+  top: 12px;
+  left: 17px;
+  animation: move 2600ms infinite;
+}
+.main .art1 {
+  top: 130px;
+  animation: a1 1.5s linear;
+}
+.main .art2 {
+  bottom: 130px;
+  animation: a2 1.5s linear;
+}
+.main .art2 .box2 {
+  width: 260px;
+  height: 120px;
+}
+.main .art2 .box2 h3 {
+  margin-top: 50px;
+  text-align: center;
+}
+@keyframes initialization {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes a1 {
+  0% {
+    top: -180px;
+  }
+  100% {
+    top: 130px;
+  }
+}
+@keyframes a2 {
+  0% {
+    bottom: -180px;
+  }
+  100% {
+    bottom: 130px;
+  }
+}
+@keyframes article-show {
+  0% {
+    margin-left: -260px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@keyframes show {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 44px;
+    opacity: 1;
+  }
+}
+@keyframes move {
+  0% {
+    left: -10px;
+  }
+  100% {
+    left: 44px;
+  }
+}
+/*# sourceMappingURL=./article.css.map */

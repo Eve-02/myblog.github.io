@@ -1,0 +1,49 @@
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.container {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+}
+.container .top-wrapper {
+  width: 1000px;
+  line-height: 60px;
+  margin: 20px auto;
+}
+.container .top-wrapper .logo {
+  width: 175px;
+  font-size: 25px;
+  float: left;
+}
+.container .top-wrapper .top-nav {
+  width: 680px;
+  float: right;
+}
+.container .top-wrapper .top-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.container .top-wrapper .top-nav ul li a {
+  display: block;
+  width: 100px;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+}
+.container .top-wrapper .top-nav ul li a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}
+.container .top-wrapper .top-nav ul li a.active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}
+/*# sourceMappingURL=./public.css.map */
